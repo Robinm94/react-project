@@ -1,0 +1,11 @@
+react-intro/.prettierrc
+# Dependency directories
+node_modules/
+dist/
+coverage/
+.vscode/
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
