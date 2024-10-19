@@ -1,0 +1,37 @@
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  color: white;
+  width: 100%;
+  z-index: 1;
+  height: 50px;
+  transition: all 0.5s ease-in;
+}
+
+.nav__logo {
+  width: 100px;
+  object-fit: contain;
+  position: fixed;
+  left: 2rem;
+}
+
+.nav__black {
+  background-color: #141414;
+}
+
+.logo {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  left: 2rem;
+  font-size: 2em;
+}
+
+.logo__mini {
+  font-size: 0.7em;
+}
