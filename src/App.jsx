@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createRoot } from "react-dom/client";
 import Nav from "./Nav";
 import "./App.css";
+import Home from "./Home";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,14 +14,16 @@ const queryClient = new QueryClient({
   },
 });
 
+// const queryClient = new QueryClient();
+
 const App = () => {
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <Nav />
         <Routes>
-          <Route path="/" />
-          <Route path="/about" />
+          <Route path="/" Component={Home} />
+          {/* <Route path="/about" /> */}
         </Routes>
       </QueryClientProvider>
     </BrowserRouter>
