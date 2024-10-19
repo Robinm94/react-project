@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "lint": "eslint",
     "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "keywords": [],
@@ -15,18 +15,23 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.59.7",
     "@vitejs/plugin-react": "^4.3.2",
-    "eslint": "^9.11.1",
+    "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.11.0",
     "prettier": "^3.3.3",
     "vite": "^5.4.8"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.59.15",
     "axios": "^1.7.7",
+    "movie-trailer": "^3.2.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "react-youtube": "^10.1.0",
+    "sass": "^1.80.3"
   }
 }
