@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import fetchMoviesList from "./fetchMoviesList";
+import fetchMoviesList from "./fetchMoviesListAndData";
 import requests from "./requests";
 import "./Banner.css";
 
@@ -9,14 +9,14 @@ function Banner() {
     queryFn: () => fetchMoviesList(requests.fetchTrending),
   });
   if (isLoading) {
-    return <h2>LOADING …</h2>;
+    return <header className="banner"></header>;
   }
   const filteredRequest = moviesList.results.filter(
-    (movie) => movie.backdrop_path !== null && movie.overview !== "",
+    (movie) =>
+      movie != null && movie.backdrop_path !== null && movie.overview !== "",
   );
   const movie =
-    filteredRequest[Math.floor(Math.random() * filteredRequest.length - 1)];
-  console.log(movie);
+    filteredRequest[Math.floor(Math.random() * (filteredRequest.length - 1))];
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
