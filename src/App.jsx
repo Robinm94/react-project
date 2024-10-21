@@ -8,8 +8,8 @@ import Main from "./Main";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: Infinity,
-      cacheTime: Infinity,
+      staleTime: 60 * 60 * 1000,
+      cacheTime: 60 * 60 * 1000,
     },
   },
 });
