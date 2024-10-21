@@ -4,6 +4,7 @@ import { useContext } from "react";
 import movieTrailer from "movie-trailer";
 import axios from "./axiosCreator";
 import YouTube from "react-youtube";
+import "./MovieTrailer.css";
 
 function MovieTrailer({ requestName }) {
   const [movie] = useContext(MovieContext);
@@ -87,8 +88,12 @@ function MovieTrailer({ requestName }) {
   }
 
   return (
-    <div id="youtube_trailer_container" tabIndex={0}>
-      <YouTube videoId={trailerUrl} opts={opts} onPlay={focus} />
+    <div
+      id="youtube_trailer_container"
+      className="youtube_trailer_container"
+      tabIndex={0}
+    >
+      <YouTube videoId={trailerUrl} opts={opts} onReady={focus} />
     </div>
   );
 }

@@ -1,0 +1,4 @@
+.youtube_trailer_container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}

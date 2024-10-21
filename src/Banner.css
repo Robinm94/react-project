@@ -2,6 +2,14 @@
   color: white;
   object-fit: contain;
   height: 448px;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
 }
 
 .banner__contents {
@@ -49,17 +57,4 @@
   color: black;
   background-color: white;
   transition: all 0.2s;
-}
-
-.banner--fadeBottom {
-  padding-bottom: 140px;
-  background-image: linear-gradient(
-    180deg,
-    hsla(0, 0%, 8%, 0) 0,
-    hsla(0, 0%, 8%, 0.15) 15%,
-    hsla(0, 0%, 8%, 0.35) 29%,
-    hsla(0, 0%, 8%, 0.58) 44%,
-    #141414 68%,
-    #141414
-  );
 }
