@@ -19,8 +19,8 @@
   left: 2rem;
 }
 
-.nav__black {
-  background-color: #141414;
+.nav__solid {
+  background: linear-gradient(0.25turn, rgb(72, 30, 104), rgb(23, 54, 108));
 }
 
 .logo {
