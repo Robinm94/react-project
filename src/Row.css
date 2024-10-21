@@ -1,5 +1,6 @@
 .row > h2 {
   margin-left: 20px;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 1);
 }
 
 .row__posters {
