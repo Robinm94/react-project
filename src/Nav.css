@@ -17,6 +17,7 @@
   object-fit: contain;
   position: fixed;
   left: 2rem;
+  top: 1 rem;
 }
 
 .nav__solid {
