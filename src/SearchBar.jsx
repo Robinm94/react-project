@@ -120,26 +120,27 @@ function SearchBar() {
           >
             {searchResults.map((result, index) => {
               return (
-                <a
-                  key={result.media_type + "_" + result.id + "_" + index}
-                  href={`/${result.media_type === undefined ? "movie" : result.media_type.toLowerCase()}/${result.id}`}
-                  className="searchResult__link"
-                >
-                  <div className="searchResult">
-                    <img
-                      className="searchResult__poster"
-                      src={`https://image.tmdb.org/t/p/w45/${result.poster_path}`}
-                      alt={`${result.title} poster`}
-                    ></img>
-                    <div className="searchResult__details">
-                      <p className="searchResult__title">{result.title}</p>
-                      <p className="searchResult__releaseDate">
-                        {result.release_date}
-                      </p>
+                <div key={result.media_type + "_" + result.id + "_" + index}>
+                  <a
+                    href={`/${result.media_type === undefined ? "movie" : result.media_type.toLowerCase()}/${result.id}`}
+                    className="searchResult__link"
+                  >
+                    <div className="searchResult">
+                      <img
+                        className="searchResult__poster"
+                        src={`https://image.tmdb.org/t/p/w45/${result.poster_path}`}
+                        alt={`${result.title} poster`}
+                      ></img>
+                      <div className="searchResult__details">
+                        <p className="searchResult__title">{result.title}</p>
+                        <p className="searchResult__releaseDate">
+                          {result.release_date}
+                        </p>
+                      </div>
+                      <div className="searchResult__end" />
                     </div>
-                    <div className="searchResult__end" />
-                  </div>
-                </a>
+                  </a>
+                </div>
               );
             })}
           </div>
