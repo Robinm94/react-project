@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./SearchBar.css";
 import SearchIcon from "./components/Icons/Search";
 import useMountTransition from "./useMountTransition";
@@ -121,8 +122,8 @@ function SearchBar() {
             {searchResults.map((result, index) => {
               return (
                 <div key={result.media_type + "_" + result.id + "_" + index}>
-                  <a
-                    href={`/${result.media_type === undefined ? "movie" : result.media_type.toLowerCase()}/${result.id}`}
+                  <Link
+                    to={`/${result.media_type === undefined ? "movie" : result.media_type.toLowerCase()}/${result.id}`}
                     className="searchResult__link"
                   >
                     <div className="searchResult">
@@ -139,7 +140,7 @@ function SearchBar() {
                       </div>
                       <div className="searchResult__end" />
                     </div>
-                  </a>
+                  </Link>
                 </div>
               );
             })}
