@@ -6,7 +6,7 @@ import "./Banner.css";
 function Banner() {
   const { isLoading, data: moviesList } = useQuery({
     queryKey: ["fetchTrending", requests.fetchTrending],
-    queryFn: () => fetchMoviesList(requests.fetchTrending),
+    queryFn: async () => await fetchMoviesList(requests.fetchTrending),
   });
   if (isLoading) {
     return <header className="banner"></header>;
