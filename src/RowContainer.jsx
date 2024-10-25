@@ -1,6 +1,4 @@
-// import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-// import { MovieContext } from "./Contexts";
 import MovieContainer from "./MovieContainer";
 import requests from "./requests";
 import fetchMoviesList from "./fetchMoviesListAndData";
@@ -8,7 +6,6 @@ import "./Row.css";
 import MovieTrailer from "./MovieTrailer";
 
 function Row({ title, requestName, isLargeRow }) {
-  // const movieHook = useState();
   const { isLoading, data: moviesList } = useQuery({
     queryKey: [requestName, requests[requestName]],
     queryFn: () => fetchMoviesList(requests[requestName]),
