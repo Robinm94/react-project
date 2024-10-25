@@ -5,10 +5,10 @@ import fetchMoviesList from "./fetchMoviesListAndData";
 import "./Row.css";
 import MovieTrailer from "./MovieTrailer";
 
-function Row({ title, requestName, isLargeRow }) {
+function Row({ title, requestName, isLargeRow, media_type }) {
   const { isLoading, data: moviesList } = useQuery({
     queryKey: [requestName, requests[requestName]],
-    queryFn: () => fetchMoviesList(requests[requestName]),
+    queryFn: async () => await fetchMoviesList(requests[requestName]),
   });
 
   if (isLoading) {
@@ -30,6 +30,9 @@ function Row({ title, requestName, isLargeRow }) {
       {/* <MovieContext.Provider value={movieHook}> */}
       <div className="row__posters">
         {movies.map((movie) => {
+          if (media_type !== undefined) {
+            movie.media_type = media_type;
+          }
           return (
             <MovieContainer
               key={movie.id}

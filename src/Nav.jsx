@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import SearchBar from "./SearchBar";
 
 function Nav() {
   const [show, handleshow] = useState(false);
@@ -17,6 +18,7 @@ function Nav() {
       <Link to="/">
         <img className="nav__logo" src="/logo.png" alt="Cinema.fyi logo" />
       </Link>
+      <SearchBar />
       {/* <span className="logo">
         cinema.<span className="logo__mini">fyi</span>
       </span> */}
