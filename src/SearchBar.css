@@ -1,0 +1,107 @@
+.search {
+  position: fixed;
+  display: flex;
+  right: 2rem;
+  height: 41px;
+}
+
+.search__button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+.searchInput {
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+  background: rgba(23, 54, 108, 0.8);
+  border: 1px solid hsla(0, 0%, 100%, 0.85);
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.searchInput.in.expanded {
+  transform: scaleX(1);
+}
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.searchInput input {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  outline: none;
+  padding: 7px 14px 7px 7px;
+  width: 212px;
+}
+
+.searchInput .empty {
+  visibility: hidden;
+}
+
+.searchInput .search-icon {
+  padding: 0 6px;
+}
+
+.searchInput .icon-close {
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0 6px;
+}
+
+.icon-close:before {
+  content: "\2715";
+}
+
+.searchResults {
+  margin-top: 1px;
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+.searchResult__link {
+  color: white;
+  text-decoration: none;
+}
+
+.searchResult {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(23, 54, 108, 0.8);
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.searchResult__poster {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.searchResult__releaseDate {
+  padding: 2px;
+}
+
+.searchResult__end {
+  clear: both;
+}

@@ -7,15 +7,47 @@ function RowSection() {
   return (
     <MovieContext.Provider value={movieHook}>
       <Row title="Trending Now" requestName="fetchTrending" isLargeRow />
-      <Row title="Top Rated" requestName="fetchTopRated" />
-      <Row title="Netflix Originals" requestName="fetchNetflixOriginals" />
-      <Row title="Disney+ Originals" requestName="fetchDisneyPlusOriginals" />
-      <Row title="AppleTV Originals" requestName="fetchAppleTVOriginals" />
-      <Row title="Action Movies" requestName="fetchActionMovies" />
-      <Row title="Comedy Movies" requestName="fetchComedyMovies" />
-      <Row title="Horror Movies" requestName="fetchHorrorMovies" />
-      <Row title="Romance Movies" requestName="fetchRomanceMovies" />
-      <Row title="Documentaries" requestName="fetchDocumentaries" />
+      <Row title="Top Rated" requestName="fetchTopRated" media_type="movie" />
+      <Row
+        title="Netflix Originals"
+        requestName="fetchNetflixOriginals"
+        media_type="tv"
+      />
+      <Row
+        title="Disney+ Originals"
+        requestName="fetchDisneyPlusOriginals"
+        media_type="tv"
+      />
+      <Row
+        title="AppleTV Originals"
+        requestName="fetchAppleTVOriginals"
+        media_type="tv"
+      />
+      <Row
+        title="Action Movies"
+        requestName="fetchActionMovies"
+        media_type="movie"
+      />
+      <Row
+        title="Comedy Movies"
+        requestName="fetchComedyMovies"
+        media_type="movie"
+      />
+      <Row
+        title="Horror Movies"
+        requestName="fetchHorrorMovies"
+        media_type="movie"
+      />
+      <Row
+        title="Romance Movies"
+        requestName="fetchRomanceMovies"
+        media_type="movie"
+      />
+      <Row
+        title="Documentaries"
+        requestName="fetchDocumentaries"
+        media_type="movie"
+      />
     </MovieContext.Provider>
   );
 }
