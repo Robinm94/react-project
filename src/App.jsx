@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import "./App.css";
 import Main from "./Main";
 import ShowDetails from "./ShowDetails";
+import { StrictMode } from "react";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,17 +20,19 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <Nav />
-        <Routes>
-          <Route path="/" Component={Main} />
-          <Route path="/:showtype/:showid" Component={ShowDetails} />
-          <Route path="*" element={<Navigate to="/" />} />
-          {/* <Route path="/about" /> */}
-        </Routes>
-      </QueryClientProvider>
-    </BrowserRouter>
+    <StrictMode>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <Nav />
+          <Routes>
+            <Route path="/" Component={Main} />
+            <Route path="/:showtype/:showid" Component={ShowDetails} />
+            <Route path="*" element={<Navigate to="/" />} />
+            {/* <Route path="/about" /> */}
+          </Routes>
+        </QueryClientProvider>
+      </BrowserRouter>
+    </StrictMode>
   );
 };
 
