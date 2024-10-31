@@ -125,7 +125,11 @@ function SearchBar() {
                   <Link
                     to={`/${result.media_type === undefined ? "movie" : result.media_type.toLowerCase()}/${result.id}`}
                     className="searchResult__link"
-                    onClick={() => setSearchClicked(false)}
+                    onClick={() => {
+                      setSearchResults([]);
+                      setSearchInput("");
+                      setSearchClicked(false);
+                    }}
                   >
                     <div className="searchResult">
                       <img
