@@ -32,7 +32,7 @@ function Banner() {
         backgroundRepeat: "no-repeat,no-repeat",
       }}
     >
-      <div className="banner__contents">
+      <div className="banner__contents" role="main">
         <h1 className="banner__title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>

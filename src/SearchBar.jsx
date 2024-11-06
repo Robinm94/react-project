@@ -153,6 +153,7 @@ function SearchBar() {
         </div>
       ) : (
         <button
+          aria-label="Search"
           className="search__button"
           onClick={() => setSearchClicked(true)}
         >
