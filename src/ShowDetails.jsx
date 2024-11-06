@@ -61,7 +61,7 @@ function ShowDetails() {
           />
         </div>
       </div>
-      <div className="moviedetails__contents">
+      <div className="moviedetails__contents" role="main">
         <div className="moviedetails__top">
           <h1 className="moviedetails__title">
             {showDetails?.title ||
