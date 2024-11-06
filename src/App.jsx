@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createRoot } from "react-dom/client";
-import Nav from "./Nav";
+import Nav from "./components/Nav/Nav";
 import "./App.css";
-import Main from "./Main";
-import ShowDetails from "./ShowDetails";
+import Main from "./components/Main/Main";
+import ShowDetails from "./components/ShowDetails/ShowDetails";
 import { StrictMode } from "react";
 
 const queryClient = new QueryClient({

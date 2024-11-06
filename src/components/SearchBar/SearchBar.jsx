@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./SearchBar.css";
-import SearchIcon from "./components/Icons/Search";
-import useMountTransition from "./useMountTransition";
-import axiosInstance from "./axiosCreator";
+import SearchIcon from "../Icons/Search";
+import useMountTransition from "../../hooks/useMountTransition";
+import axiosInstance from "../../services/axiosCreator";
 
 function SearchBar() {
   const [searchClicked, setSearchClicked] = useState(false);

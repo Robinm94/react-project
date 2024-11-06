@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams, Navigate } from "react-router-dom";
-import fetchShowDetails from "./fetchShowDetails";
+import fetchShowDetails from "../../services/fetchShowDetails";
 import YouTube from "react-youtube";
-import getTrailer from "./getTrailerKey";
+import getTrailer from "../../services/getTrailerKey";
 import "./ShowDetails.css";
 
 function ShowDetails() {
@@ -47,6 +47,9 @@ function ShowDetails() {
       <img
         src={`https://image.tmdb.org/t/p/original/${showDetails?.backdrop_path}`}
         className="moviedetails__banner"
+        alt={`${
+          showDetails?.title || showDetails?.name || showDetails?.original_name
+        } banner`}
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center center",
