@@ -36,7 +36,7 @@ function SearchBar() {
     while (page <= totalPages) {
       const response = await axiosInstance
         .get(
-          `/search/multi?query=${searchInputValue}&include_adult=false&with_original_language=en&sort_by=popularity.desc&page=${page}`,
+          `/search/multi?query=${searchInputValue}&include_adult=false&sort_by=popularity.desc&page=${page}`,
         )
         .catch((error) => console.log(error.message));
       if (response?.data?.results.length > 0) {
