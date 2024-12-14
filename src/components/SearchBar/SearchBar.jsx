@@ -46,9 +46,6 @@ function SearchBar() {
     }
     if (allResults.length > 0) {
       const results = allResults
-        .filter((result) => {
-          return result.original_language === "en";
-        })
         .sort((a, b) => {
           return b.popularity - a.popularity;
         })
