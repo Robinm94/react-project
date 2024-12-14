@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import MovieContainer from "./MovieContainer";
-import requests from "./requests";
-import fetchMoviesList from "./fetchMoviesListAndData";
+import MovieContainer from "../MovieContainer/MovieContainer";
+import requests from "../../requests";
+import fetchMoviesList from "../../services/fetchMoviesListAndData";
 import "./Row.css";
-import MovieTrailer from "./MovieTrailer";
+import MovieTrailer from "../MovieTrailer/MovieTrailer";
 
 function Row({ title, requestName, isLargeRow, media_type }) {
   const { isLoading, data: moviesList } = useQuery({

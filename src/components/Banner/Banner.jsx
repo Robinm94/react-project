@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import fetchMoviesList from "./fetchMoviesListAndData";
-import requests from "./requests";
+import fetchMoviesList from "../../services/fetchMoviesListAndData";
+import requests from "../../requests";
 import "./Banner.css";
 
 function Banner() {

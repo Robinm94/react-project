@@ -1,5 +1,5 @@
 import Row from "./RowContainer";
-import { MovieContext } from "./Contexts";
+import { MovieContext } from "../../contexts/Contexts";
 import { useState } from "react";
 
 function RowSection() {
