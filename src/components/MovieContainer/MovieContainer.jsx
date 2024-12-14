@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MovieContext } from "./Contexts";
+import { MovieContext } from "../../contexts/Contexts";
 
 function MovieContainer({ movie, requestName, isLargeRow }) {
   const [, setMovie] = useContext(MovieContext);

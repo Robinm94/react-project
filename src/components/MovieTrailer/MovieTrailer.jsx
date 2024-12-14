@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import { MovieContext } from "./Contexts";
+import { MovieContext } from "../../contexts/Contexts";
 import { useContext } from "react";
-import getTrailer from "./getTrailerKey";
+import getTrailer from "../../services/getTrailerKey";
 import YouTube from "react-youtube";
 import "./MovieTrailer.css";
 
