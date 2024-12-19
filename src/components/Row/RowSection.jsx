@@ -28,6 +28,7 @@ function RowSection() {
         requestName="fetchActionMovies"
         media_type="movie"
       />
+      <Row title="Animations" requestName="fetchAnimations" media_type="tv" />
       <Row
         title="Comedy Movies"
         requestName="fetchComedyMovies"
