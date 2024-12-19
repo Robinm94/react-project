@@ -17,6 +17,7 @@ const requests = {
   fetchHorrorMovies: `/discover/movie?with_genres=27&with_original_language=en&sort_by=popularity.desc`,
   fetchRomanceMovies: `/discover/movie?with_genres=10749&with_original_language=en&sort_by=popularity.desc`,
   fetchDocumentaries: `/discover/movie?with_genres=99&with_original_language=en&sort_by=popularity.desc&include_adult=false`,
+  fetchAnimations: `/discover/tv?with_genres=16&sort_by=popularity.desc`,
 };
 
 export default requests;
