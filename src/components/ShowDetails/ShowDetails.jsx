@@ -44,17 +44,23 @@ function ShowDetails() {
 
   return (
     <div className="showDetails">
-      <img
-        src={`https://image.tmdb.org/t/p/original/${showDetails?.backdrop_path}`}
-        className="moviedetails__banner"
-        alt={`${
-          showDetails?.title || showDetails?.name || showDetails?.original_name
-        } banner`}
-        style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-        }}
-      />
+      {showDetails?.backdrop_path ? (
+        <img
+          src={`https://image.tmdb.org/t/p/original/${showDetails?.backdrop_path}`}
+          className="moviedetails__banner"
+          alt={`${
+            showDetails?.title ||
+            showDetails?.name ||
+            showDetails?.original_name
+          } banner`}
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+          }}
+          onError="this.style='display: none'"
+        />
+      ) : null}
+
       <div className="youtube_trailer_container_details">
         <div id="youtube_trailer_container_details" tabIndex={0}>
           <YouTube
